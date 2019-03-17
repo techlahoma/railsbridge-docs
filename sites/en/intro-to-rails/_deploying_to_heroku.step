@@ -11,18 +11,18 @@ step "Edit the Gemfile" do
   message "Open the file called `Gemfile` in Atom, or your preferred editor, and find the line containing:"
 
   source_code :ruby, <<-RUBY
-gem 'sqlite3'
+gem 'sqlite3', '~>1.3.6'
   RUBY
 
   message "**Remove that line** and replace it with:"
 
   source_code :ruby, <<-RUBY
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~>1.3.6'
 end
 
 group :production do
-  gem 'pg', '~> 0.18'
+  gem 'pg', '~> 1.1.4'
 end
   RUBY
 end
