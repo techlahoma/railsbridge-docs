@@ -1,8 +1,6 @@
-$railsbridge_purple: #6c266f;
-$railsbridge_blue: #2493b8;
-$railsbridge_darkerblue: #428bca;
+@import "_colors";
 
-$header-height: 50px;
+$header-height: 70px;
 
 nav *, nav *:before, nav *:after {
   -webkit-box-sizing: border-box;
@@ -141,7 +139,7 @@ nav *, nav *:before, nav *:after {
   li a:active,
   li a:hover,
   li a:focus {
-    background-color: $railsbridge_blue;
+    background-color: $railsbridge_grey;
     color: white;
   }
 }
@@ -156,10 +154,9 @@ nav *, nav *:before, nav *:after {
   min-height: $header-height;
   margin-bottom: 20px;
   border: 0;
-  background-color: $railsbridge_purple;
-  background-image: url("/img/navbar_texture.gif");
+  background-color: $railsbridge_main;
   border-bottom-width: 12px;
-  border-bottom-color: $railsbridge_blue;
+  border-bottom-color: $railsbridge_grey;
   border-bottom-style: solid;
 
   .navbar-header {
@@ -173,6 +170,7 @@ nav *, nav *:before, nav *:after {
     font-weight: 100;
     padding-top: 8px;
     margin-left: 35px;
+    line-height: 2;
   }
 
   a {
