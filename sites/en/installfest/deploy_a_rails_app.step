@@ -61,19 +61,25 @@ step "Deploy your app to Heroku" do
       Inside this file, change the line:
     MARKDOWN
     source_code :ruby, <<-RUBY
-      gem 'sqlite3'
+      gem 'sqlite3', '~>1.3.6'
     RUBY
 
     message "To this:"
 
     source_code :ruby, <<-RUBY
       group :development, :test do
-        gem 'sqlite3'
+        gem 'sqlite3', '~>1.3.6'
       end
 
       group :production do
         gem 'pg', '~> 0.18'
       end
+    RUBY
+
+    message "On Windows the line may look like this"
+
+    source_code :ruby, <<-RUBY
+      gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'
     RUBY
 
     message "Save the file."

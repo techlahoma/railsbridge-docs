@@ -25,6 +25,12 @@ group :production do
   gem 'pg', '~> 1.1.4'
 end
   RUBY
+
+  message "On Windows the line may look like this"
+
+  source_code :ruby, <<-RUBY
+    gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'
+  RUBY
 end
 
 step "Apply the Gemfile changes" do
