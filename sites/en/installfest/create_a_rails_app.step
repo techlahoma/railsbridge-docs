@@ -44,7 +44,7 @@ step "Create a new Rails app" do
 
   tip "If you are on Windows and the command above failed, you may need to instead make the line say:"
   message "`gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'`"
-
+  console "bundle update"
 
   
   console "rails server"
