@@ -34,7 +34,7 @@ step "Create a new Rails app" do
 
   message "If you are on Windows you may need to instead make the line say `gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'`"
 
-  message "In your console, make sure that you're in the `test_app` folder. You can type `pwd` (**p**rint **w**orking **d**irectory) in the terminal to see what folder you are in."
+  message "In your console, make sure that you're in the `suggestotron` folder. You can type `pwd` (**p**rint **w**orking **d**irectory) in the terminal to see what folder you are in."
 
   console "bundle update"
 
