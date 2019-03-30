@@ -14,7 +14,7 @@ step "Have a volunteer check your tool versions" do
     h3 "On all operating systems:"
 
     console "ruby -v"
-    fuzzy_result "ruby 2.3{FUZZY}.3p222 (2015-12-16 revision 53155) [x86_64-darwin13]{/FUZZY}"
+    fuzzy_result "ruby 2.5{FUZZY}.3p222 (2015-12-16 revision 53155) [x86_64-darwin13]{/FUZZY}"
 
     tip "As long as your Ruby version is #{version_string(:ruby_short)} or above, you're good to go."
 
@@ -22,7 +22,7 @@ step "Have a volunteer check your tool versions" do
     fuzzy_result "Bundler version 2{FUZZY}.x.x{/FUZZY}"
 
     console "rails -v"
-    fuzzy_result "Rails 5.0{FUZZY}.x{/FUZZY}"
+    fuzzy_result "Rails 5.2{FUZZY}.x{/FUZZY}"
 
     tip 'The RailsBridge curriculum is written for Rails 5, so if you still have Rails 4.x or earlier, you need to install Rails 5 with `gem install rails`.'
   end
