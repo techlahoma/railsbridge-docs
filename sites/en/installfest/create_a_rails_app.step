@@ -24,6 +24,20 @@ step "Create a new Rails app" do
 
   message "The command's output is voluminous, and will take some time to complete, with a long pause in the middle, after all the 'create...' statements ending in 'bundle install'.  When it fully completes, it will return you to your home prompt.  Look for the 'Bundle complete!' message just above."
 
+  message "**The command above may fail with an error about sqlite.** If that's the case follow the following instructions to fix the problem. If not, scroll down to the next step."
+
+  message "Open the file `Gemfile` in an editor (In the InstallFest yesterday, we suggested that you install and use **Atom** as your editor)."
+
+  message "Look for the line `gem 'sqlite3'` (line 9)"
+
+  message "Update that line to say `gem 'sqlite3', '~>1.3.6'`"
+
+  message "If you are on Windows you may need to instead make the line say `gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'`"
+
+  message "In your console, make sure that you're in the `test_app` folder. You can type `pwd` (**p**rint **w**orking **d**irectory) in the terminal to see what folder you are in."
+
+  console "bundle update"
+
   console "cd test_app"
   console "rails server"
 
