@@ -10,7 +10,13 @@ steps do
     message "Look for the line `gem 'sqlite3'` (line 9)"
 
     message "Update that line to say `gem 'sqlite3', '~>1.3.6'`"
+    
+    tip "On Windows you should update the line to this:"
 
+    source_code :ruby, <<-RUBY
+      gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'
+    RUBY
+    
     message "In your console, make sure that you're in the `suggestotron` folder. You can type `pwd` (**p**rint **w**orking **d**irectory) in the terminal to see what folder you are in."
 
     console "bundle update"
