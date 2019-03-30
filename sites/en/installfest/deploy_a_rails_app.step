@@ -76,10 +76,22 @@ step "Deploy your app to Heroku" do
       end
     RUBY
 
-    message "On Windows the line may look like this"
+    tip "On Windows the line may look like this"
 
     source_code :ruby, <<-RUBY
       gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'
+    RUBY
+
+    message "If that's the case, then your new lines should be:"
+
+    source_code :ruby, <<-RUBY
+      group :development, :test do
+        gem 'sqlite3', git: 'https://github.com/larskanis/sqlite3-ruby', branch: 'add-gemspec'
+      end
+
+      group :production do
+        gem 'pg', '~> 0.18'
+      end
     RUBY
 
     message "Save the file."
